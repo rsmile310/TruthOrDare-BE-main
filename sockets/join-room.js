@@ -118,6 +118,7 @@ const joinRoom = (socket, { roomId, name, avatar }) => {
                       Promise.all(ops).then((res) => {
                         console.log(res);
                         socket.emit("action-selection", res[0]);
+                        // socket.emit("tord-selection", res[1].truthOrDare);
                       });
 
                       break;
